@@ -25,7 +25,10 @@ export default {
         <section id="cards">
             <div class="container">
 
+                <!-- card -->
                 <div class="dcCard" v-for="(element, index) in store.dcCards" :key="index">
+
+                    <!-- img -->
                     <div class="img">
                         <img :src="`/img/${element.url}`" :alt="element.name">
                     </div>
@@ -36,73 +39,4 @@ export default {
     </main>
 </template>
 
-<style lang="scss" scoped>
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-img {
-    max-width: 100%;
-}
-
-
-main {
-    width: 100%;
-
-    #contents {
-        min-height: 200px;
-        background-color: #1c1c1c;
-        display: flex;
-        align-items: center;
-
-        h1 {
-            color: #fff;
-        }
-    }
-
-    #cards {
-        height: 200px;
-        background-color: #0282f9;
-        display: flex;
-        align-items: center;
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .dcCard {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-basis: calc(100% / 5);
-
-                .img {
-                    flex-basis: 20%;
-
-                    img {
-                        max-height: 95px;
-                    }
-                }
-
-                h3 {
-                    margin-left: 10px;
-                    color: #fff;
-                    font-weight: 400;
-                    font-size: 0.8rem;
-                    text-transform: uppercase;
-                }
-
-            }
-        }
-    }
-
-}
-</style>
+<style lang="scss" scoped></style>
