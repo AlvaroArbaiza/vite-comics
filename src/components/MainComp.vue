@@ -74,7 +74,6 @@ main {
         align-items: center;
 
         .container {
-            width: 75%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -82,6 +81,7 @@ main {
             .dcCard {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 flex-basis: calc(100% / 5);
 
                 .img {

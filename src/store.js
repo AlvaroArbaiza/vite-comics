@@ -51,34 +51,88 @@ export const store = reactive({
         {
             id: "shop",
             links: [
-                "Shop DC",
-                "Shop DC Collectibles"
+                {
+                    name: "Shop DC",
+                    show: true
+                },
+                {
+                    name: "Shop DC Collectibles",
+                    show: true
+                }
             ]
         },
         {
             id: "dc",
             links: [
-                "Terms Of Use",
-                "Privacy policy (New)",
-                "Ad Choices",
-                "Advertising",
-                "Jobs",
-                "Subscriptions",
-                "Talent Workshops",
-                "CPSC Certificates",
-                "Ratings",
-                "Shop Help",
-                "Contact Us"
+                {
+                    name: "Terms Of Use",
+                    show: true
+                },
+                {
+                    name: "Privacy policy (New)",
+                    show: true
+                },
+                {
+                    name: "Ad Choices",
+                    show: true
+                },
+                {
+                    name: "Advertising",
+                    show: true
+                },
+                {
+                    name: "Jobs",
+                    show: true
+                },
+                {
+                    name: "Subscriptions",
+                    show: true
+                },
+                {
+                    name: "Talent Workshops",
+                    show: true
+                },
+                {
+                    name: "CPSC Certificates",
+                    show: true
+                },
+                {
+                    name: "Ratings",
+                    show: true
+                },
+                {
+                    name: "Shop Help",
+                    show: true
+                },
+                {
+                    name: "Contact Us",
+                    show: true
+                }
             ]
         },
         {
             id: "sites",
             links: [
-                "DC",
-                "MAD Magazine",
-                "DC Kids",
-                "DC Universe",
-                "DC Power Visa"
+                {
+                    name: "DC",
+                    show: true
+                },
+                {
+                    name: "MAD Magazine",
+                    show: true
+                },
+                {
+                    name: "DC Kids",
+                    show: true
+                },
+                {
+                    name: "DC Universe",
+                    show: true
+                },
+                {
+                    name: "DC Power Visa",
+                    show: true
+                }
             ]
         }
     ],
@@ -103,5 +157,15 @@ export const store = reactive({
             name: "dc power visa",
             url: "buy-dc-power-visa.svg"
         }
-    ]
+    ],
+
+    idcComics: 0,
+    ind() {
+        // this.index
+
+        this.dcComics.forEach((element, index) => {
+
+            this.idcComics = index;
+        })
+    }
 })
