@@ -1,89 +1,11 @@
 <script>
+import { store } from '../store.js';
+
 export default {
     name: "HeaderComp",
     data() {
         return {
-            dcComics: [
-                {
-                    id: "dc comics",
-                    links: [
-                        {
-                            name: "Characters",
-                            show: true
-                        },
-                        {
-                            name: "Comics",
-                            show: true
-                        },
-                        {
-                            name: "Movies",
-                            show: true
-                        },
-                        {
-                            name: "TV",
-                            show: true
-                        },
-                        {
-                            name: "Games",
-                            show: true
-                        },
-                        {
-                            name: "Collectibles",
-                            show: false
-                        },
-                        {
-                            name: "Videos",
-                            show: true
-                        },
-                        {
-                            name: "Fans",
-                            show: false
-                        },
-                        {
-                            name: "News",
-                            show: true
-                        },
-                        {
-                            name: "Shop",
-                            show: true
-                        }
-                    ]
-                },
-                {
-                    id: "shop",
-                    links: [
-                        "Shop DC",
-                        "Shop DC Collectibles"
-                    ]
-                },
-                {
-                    id: "dc",
-                    links: [
-                        "Terms Of Use",
-                        "Privacy policy (New)",
-                        "Ad Choices",
-                        "Advertising",
-                        "Jobs",
-                        "Subscriptions",
-                        "Talent Workshops",
-                        "CPSC Certificates",
-                        "Ratings",
-                        "Shop Help",
-                        "Contact Us"
-                    ]
-                },
-                {
-                    id: "sites",
-                    links: [
-                        "DC",
-                        "MAD Magazine",
-                        "DC Kids",
-                        "DC Universe",
-                        "DC Power Visa"
-                    ]
-                }
-            ]
-
+            store
         };
     }
 }
@@ -102,7 +24,7 @@ export default {
             <!-- nav -->
             <nav>
                 <ul>
-                    <li v-for="(element, index) in dcComics[0].links" :key="index">
+                    <li v-for="(element, index) in store.dcComics[0].links" :key="index">
                         <a href="#">
                             <span>{{ element.name }}</span>
                             <hr>
@@ -136,7 +58,7 @@ header {
 
         // logo
         #logo {
-            height: 90%;
+            height: 80%;
 
             img {
                 max-height: 100%;
@@ -156,7 +78,7 @@ header {
                 li {
                     height: 100%;
                     list-style-type: none;
-                    padding: 10px;
+                    padding: 0 10px;
                     cursor: pointer;
 
                     a {
