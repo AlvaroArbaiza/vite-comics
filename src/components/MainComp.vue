@@ -91,11 +91,27 @@ export default {
 
 <template>
     <main>
+
+        <!-- jumbotron -->
+        <section id="jumbotron">
+
+        </section>
         <!-- contents -->
         <section id="contents">
             <div class="container">
 
+                <!-- current series -->
+                <div id="cur-series">
+                    <span>current series</span>
+                </div>
+
+                <!-- series -->
                 <CardComp v-for="(elem, index) in cardsArray" :key="index" :dettagliProdotto="elem" />
+
+                <!-- load more -->
+                <div id="load-more">
+                    <span>load more</span>
+                </div>
 
             </div>
         </section>

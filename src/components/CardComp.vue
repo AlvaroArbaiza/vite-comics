@@ -12,7 +12,7 @@ export default {
     <div class="series">
 
         <img :src="dettagliProdotto.thumb" :alt="dettagliProdotto.series">
-        <h4>{{ dettagliProdotto.series }}</h4>
+        <h5>{{ dettagliProdotto.series }}</h5>
     </div>
 </template>
 <style lang="scss" scoped></style>
