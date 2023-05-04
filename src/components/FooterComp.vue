@@ -34,9 +34,6 @@ export default {
                         </ul>
                     </div>
                 </div>
-
-                <!-- right -->
-                <div id="dc-logo"></div>
             </div>
         </section>
 

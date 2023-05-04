@@ -108,6 +108,7 @@ main {
                     font-size: 1.4rem;
                     font-weight: 600;
                     text-transform: uppercase;
+                    cursor: default;
                     background-color: #0282f9;
                     color: #fff;
                 }
@@ -140,6 +141,7 @@ main {
                     font-size: 0.8rem;
                     font-weight: 600;
                     text-transform: uppercase;
+                    cursor: pointer;
                     background-color: #0282f9;
                     color: #fff;
                 }
@@ -197,8 +199,11 @@ footer {
         .container {
             @include widthMargin(80%, 0);
             @include center('vertical');
-            justify-content: space-between;
+            justify-content: flex-start;
             height: 100%;
+            background: url("/img/dc-logo-bg.png");
+            background-repeat: no-repeat;
+            background-position: center right;
 
             // left
             .left {
@@ -207,6 +212,7 @@ footer {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
+
 
                 .lists {
                     width: calc(100% /3);
@@ -236,16 +242,6 @@ footer {
                         }
                     }
                 }
-            }
-
-            // right
-            #dc-logo {
-                height: 100%;
-                flex-basis: 50%;
-                background: url("/img/dc-logo-bg.png");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
             }
         }
     }
